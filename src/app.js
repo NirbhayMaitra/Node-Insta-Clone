@@ -15,7 +15,8 @@ mongoose.connect(process.env.DB_URL+process.env.DB_NAME)
 .then(()=>{
     console.log("Connected to DB");
 })
-.catch(()=>{
+.catch((err)=>{
+    console.log(err)
     console.log("Cannot be connected to DB");
 });
 
